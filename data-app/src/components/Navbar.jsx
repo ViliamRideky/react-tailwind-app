@@ -21,6 +21,7 @@ const Navbar = ({ handleScroll, refs }) => {
                 <li className='p-4 cursor-pointer hover:text-[#1cc9da] font-bold uppercase' onClick={() => scrollToSection(refs.draftRef)}>Rekord</li>
                 <li className='p-4 cursor-pointer hover:text-[#1cc9da] font-bold uppercase' onClick={() => scrollToSection(refs.patronRef)}>Patrón</li>
                 <li className='p-4 cursor-pointer hover:text-[#1cc9da] font-bold uppercase' onClick={() => scrollToSection(refs.cardsRef)}>Obľúbenci</li>
+                <li className='p-4 cursor-pointer hover:text-[#1cc9da] font-bold uppercase' onClick={() => scrollToSection(refs.maestroRef)}>Maestro</li>
                 <li className='p-4 cursor-pointer hover:text-[#1cc9da] font-bold uppercase' onClick={() => scrollToSection(refs.finalRef)}>Štatistika</li>
             </ul>
             <div onClick={handleNav} className='block md:hidden'>
@@ -33,6 +34,7 @@ const Navbar = ({ handleScroll, refs }) => {
                     <li className='p-4 border-b border-gray-600 cursor-pointer hover:text-[#1cc9da]' onClick={() => scrollToSection(refs.draftRef)}>Rekord</li>
                     <li className='p-4 border-b border-gray-600 cursor-pointer hover:text-[#1cc9da]' onClick={() => scrollToSection(refs.patronRef)}>Patrón</li>
                     <li className='p-4 border-b border-gray-600 cursor-pointer hover:text-[#1cc9da]' onClick={() => scrollToSection(refs.cardsRef)}>Obľúbenci</li>
+                    <li className='p-4 border-b border-gray-600 cursor-pointer hover:text-[#1cc9da]' onClick={() => scrollToSection(refs.maestroRef)}>Maestro</li>
                     <li className='p-4 cursor-pointer hover:text-[#1cc9da]' onClick={() => scrollToSection(refs.finalRef)}>Štatistika</li>                  
                 </ul>
             </div>

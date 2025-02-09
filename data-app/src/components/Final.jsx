@@ -24,8 +24,8 @@ const Final = () => {
     }, [wineCount]);
 
     return (
-        <div className="w-full bg-black py-16 px-4">
-            <div className="max-w-[1240px] mx-auto text-white">
+        <div className="w-full bg-white py-16 px-4">
+            <div className="max-w-[1240px] mx-auto text-black">
                 <div className="flex flex-col items-center mb-12">
                     <h2 className="text-2xl font-bold mb-4">Počet vypitých pív počas draftu:</h2>
                     <div className="flex items-center gap-4">
