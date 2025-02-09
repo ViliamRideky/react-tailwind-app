@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import Cards from "./components/Cards"
 import Draft from "./components/Draft"
 import Final from "./components/Final"
@@ -6,14 +7,46 @@ import Navbar from "./components/Navbar"
 import Patron from "./components/Patron"
 
 function App() {
+  const heroRef = useRef()
+  const draftRef = useRef()
+  const patronRef = useRef()
+  const cardsRef = useRef()
+  const finalRef = useRef()
+
+  const handleScroll = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <Draft/>
-      <Patron/>
-      <Cards/>
-      <Final/>
+      <Navbar 
+        handleScroll={handleScroll}
+        refs={{
+          heroRef,
+          draftRef,
+          patronRef,
+          cardsRef,
+          finalRef
+        }}
+      />
+      <div ref={heroRef}>
+        <Hero handleScroll={handleScroll} patronRef={patronRef}/>
+      </div>
+      <div ref={draftRef}>
+        <Draft />
+      </div>
+      <div ref={patronRef}>
+        <Patron />
+      </div>
+      <div ref={cardsRef}>
+        <Cards />
+      </div>
+      <div ref={finalRef}>
+        <Final />
+      </div>
     </div>
   )
 }
